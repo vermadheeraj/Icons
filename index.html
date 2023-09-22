@@ -8,6 +8,9 @@
   <title>Personal Information</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
   <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+
 
   <style>
     * {
@@ -48,13 +51,13 @@
     }
 
     .navbar a {
-      padding: 8px 5px;
-      font-size: 20px;
+      padding: 5px 8px;
+      font-size: 17px;
       background: #1a1a1a;
       flex: 1;
       color: white;
       text-align: center;
-      font-family: serif;
+      font-family: math;
       transition: 0.2s linear;
     }
 
@@ -421,6 +424,15 @@
       text-align: left;
     }
 
+    .lbvXTF {
+      position: fixed;
+      z-index: 99999999;
+      margin: 70px 10px;
+      inset: auto 0px 0px auto;
+    }
+
+
+
     @media (max-width: 800px) {
       html {
         font-size: 55%;
@@ -456,6 +468,150 @@
         flex-wrap: wrap;
         padding: 10px 8px;
       }
+    }
+
+    div.scroll-container {
+      background-color: black;
+      overflow: auto;
+      white-space: nowrap;
+      padding: 10px;
+    }
+
+    div.scroll-container img {
+      padding: 10px;
+    }
+
+
+    /*----------------start project section -------------*/
+    #portfolio {
+      padding: 50px 0;
+    }
+
+    #portfolio .contenier {
+      text-align: center;
+      padding: 0 30px;
+    }
+
+    #portfolio .contenier p {
+      margin-top: 8px;
+    }
+
+    .work-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-gap: 40px;
+      margin-top: 50px;
+
+    }
+
+    .work {
+      border-radius: 10px;
+      position: relative;
+      overflow: hidden;
+
+    }
+
+    .work img {
+      width: 100%;
+      border-radius: 10px;
+      display: block;
+      transition: transform 0.5s;
+    }
+
+    .layer {
+      width: 100%;
+      height: 0;
+      background: linear-gradient(#3383b3f2, #97253ae8);
+      border-radius: 5px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 0 40px;
+      text-align: center;
+      font-size: 14px;
+      transition: height 0.5s;
+    }
+
+    .layer h3 {
+      font-weight: 600;
+      font-family: system-ui;
+      margin-bottom: 8px;
+    }
+
+    .layer a {
+      margin-top: 5px;
+      color: crimson;
+      text-decoration: none;
+      font-size: 18px;
+      line-height: 40px;
+      background: #fff;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      text-align: center;
+    }
+
+    .layer P{
+      margin-top: 5px;
+    }
+
+    .work:hover img {
+      transform: scale(1.1);
+    }
+
+    .work:hover .layer {
+      height: 100%;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 5px;
+      padding: 8px;
+      font-size: 18px;
+      background: crimson;
+      color: white;
+      border-radius: 5px;
+      font-family: serif;
+      animation-name: btn-animation;
+      position: relative;
+      animation-duration: 4s;
+      animation-delay: 2s;
+      animation-iteration-count: 3;
+    }
+
+    .btn:hover {
+      background: crimson;
+      transform: scale(1.1);
+    }
+
+    #contact {
+      background: #092d38;
+      padding-top: 50px;
+    }
+
+    .contact-left {
+      flex-basis: 35%;
+    }
+
+    .contact-right {
+      flex-basis: 60%;
+    }
+
+    .contact-left p {
+      margin-top: 30px;
+
+    }
+
+    .contact-left p i {
+      color: #1092de;
+      margin-right: 15px;
+      font-size: 25px;
+
     }
 
     @media (max-width: 500px) {
@@ -495,6 +651,9 @@
       <a href="about.html" class="btn">about me <i class="fas fa-user"></i></a>
     </div>
   </section>
+
+
+
 
 
   <section class="skills">
@@ -562,9 +721,10 @@
   <br />
   <h1 class="heading">Services <span>Now</span></h1>
   <section class="step-container" id="about">
-    <div class="step">
+    <div class="step" >
       <span>01 </span>
       <h3 style="font-family: cursive">Website Desgin</h3>
+      <img src="web-icon5.svg" alt="" height="200px">
       <h5 style="font-family: cursive; font-size: 13px">
         Web Desgin is the process of creating and maintaining websites, which
         are online platforms that serve a variety of purposes, such as news,
@@ -577,6 +737,7 @@
     <div class="step">
       <span>02</span>
       <h3 style="font-family: cursive">Website Development</h3>
+      <img src="web-icon3.svg" alt="" height="200px">
       <h5 style="font-family: cursive; font-size: 13px">
         Web development is the process of creating and maintaining websites,
         which are online platforms that serve a variety of purposes, such as
@@ -591,6 +752,7 @@
     <div class="step">
       <span>03</span>
       <h3 style="font-family: cursive">E-commerce Website Development</h3>
+      <img src="web-icon4.svg" alt="" height="200px">
       <h5 style="font-family: cursive; font-size: 13px">
         Ecommerce is a method of buying and selling goods and services online.
         The definition of ecommerce business can also include tactics like
@@ -604,103 +766,245 @@
   <br />
   <h1 class="heading"><span>My</span> Projects</h1>
 
-  <section class="trainers" id="trainers">
-    <div class="box-container" style="padding: 20px">
-      <div class="box">
-        <img src="project1.png" alt="" />
-        <div class="content">
-          <span>Online Pizza. Website</span>
+  <br>
+  <div class="scroll-container">
+    <img src="mob1.png" alt="Cinque Terre" height="400px">
+    <img src="mob2.png" alt="Forest" height="400px">
+    <img src="mob3.png" alt="Cinque Terre" height="400px">
+    <img src="mob4.png" alt="Forest" height="400px">
+    <img src="mob5.png" alt="Cinque Terre" height="400px">
+    <img src="mob6.png" alt="Forest" height="400px">
+    <img src="mob7.png" alt="Forest" height="400px">
+    <img src="mob8.png" alt="Cinque Terre" height="400px">
+    <img src="mob9.png" alt="Forest" height="400px">
+    <img src="mob10.png" alt="Forest" height="400px">
 
-          <div class="share">
-            <a href=""><i></i></a>
+
+  </div>
+
+
+  <!-- My project -->
+
+
+  <div id="portfolio">
+    <div class="contenier">
+      <h1 class="sub-title">My Repositories</h1>
+      <p>Creative endeavours will reveal one's talent and commitment..</p>
+      
+      <div class="work-list">
+
+        <div class="work">
+          <img src="project4.png" alt="">
+          <div class="layer">
+            <h3>Bloging Website</h3>
+            <p>This website has been link here please visit</p>
+            <a target="_blank" href="https://vermadheeraj.github.io/Perfect/"><i
+                class="fa-solid fa-up-right-from-square"></i></a>
+          </div>
+
+        </div>
+        <div class="work">
+          <img src="project8.png">
+          <div class="layer">
+            <h3>Dream Wedding Studio Website</h3>
+            <p>This website has been link here please visit</p>
+            <a target="_blank" href="https://vermadheeraj.github.io/Dream-Wedding/index.html"><i
+                class="fa-solid fa-up-right-from-square"></i></a>
+          </div>
+
+        </div>
+        <div class="work">
+          <img src="project6.png">
+          <div class="layer">
+            <h3>Studio Website</h3>
+            <p>This website has been link here please visit</p>
+            <a target="_blank" href="http://www.xpressionsstudio.in/"><i
+                class="fa-solid fa-up-right-from-square"></i></a>
+          </div>
+
+        </div>
+
+
+      </div>
+
+      
+      <div class="work-list">
+
+        <div class="work">
+          <img src="template-1.png" alt="">
+          <div class="layer">
+            <h3>Pizza Website</h3>
+            <p>This website has been link here please visit</p>
+            <a target="_blank" href="https://vermadheeraj.github.io/Pizza./"><i
+                class="fa-solid fa-up-right-from-square"></i></a>
+          </div>
+
+        </div>
+        <div class="work">
+          <img src="template-2.png">
+          <div class="layer">
+            <h3>University Website</h3>
+            <p>This website has been link here please visit</p>
+            <a target="_blank" href="https://vermadheeraj.github.io/university/"><i
+                class="fa-solid fa-up-right-from-square"></i></a>
+          </div>
+
+        </div>
+        <div class="work">
+          <img src="template-3.png">
+          <div class="layer">
+            <h3>Gym Fitnees Website</h3>
+            <p>This website has been link here please visit</p>
+            <a target="_blank" href="https://vermadheeraj.github.io/university/"><i
+                class="fa-solid fa-up-right-from-square"></i></a>
+          </div>
+
+        </div>
+
+
+      </div>
+
+      
+      <div class="work-list">
+
+        <div class="work">
+          <img src="project11.png" alt="">
+          <div class="layer">
+            <h3>shopping Website</h3>
+            <p>This website has been link here please visit</p>
+            <a target="_blank" href="https://vermadheeraj.github.io/smart-watch/"><i
+                class="fa-solid fa-up-right-from-square"></i></a>
+          </div>
+
+        </div>
+        <div class="work">
+          <img src="project9.png">
+          <div class="layer">
+            <h3>Photography Website</h3>
+            <p>This website has been link here please visit</p>
+            <a target="_blank" href="https://vivekkrishnan.com/"><i
+                class="fa-solid fa-up-right-from-square"></i></a>
+          </div>
+
+        </div>
+        <div class="work">
+          <img src="template-8.png">
+          <div class="layer">
+            <h3>Gym Fitnees Website</h3>
+            <p>This website has been link here please visit</p>
+            <a target="_blank" href="https://vermadheeraj.github.io/smart-watch/"><i
+                class="fa-solid fa-up-right-from-square"></i></a>
+          </div>
+
+        </div>
+
+
+      </div>
+      <br>
+      <a href="portfolio.html" class="btn">More Details</a>
+
+    </div>
+  </div>
+
+  <!--
+
+    <section class="trainers" id="trainers">
+      <div class="box-container" style="padding: 20px">
+        <div class="box">
+          <img src="project1.png" alt="" />
+          <div class="content">
+            <span>Online Pizza. Website</span>
+            
+            <div class="share">
+              <a href=""><i></i></a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="box-container" style="padding: 20px">
-      <div class="box">
-        <img src="project2.png" alt="" />
-        <div class="content">
-          <span>Shoes Website</span>
-
-          <div class="share">
-            <a href=""><i></i></a>
+      <div class="box-container" style="padding: 20px">
+        <div class="box">
+          <img src="project2.png" alt="" />
+          <div class="content">
+            <span>Shoes Website</span>
+            
+            <div class="share">
+              <a href=""><i></i></a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
     <div class="box-container" style="padding: 20px">
       <div class="box">
         <img src="project3.png" alt="" />
         <div class="content">
           <span>Pizza Website</span>
-
+          
           <div class="share">
             <a href=""><i></i></a>
           </div>
         </div>
       </div>
     </div>
-
+    
     <div class="box-container" style="padding: 20px">
       <div class="box">
         <img src="template-1.png" alt="" />
-        <div class="content">
-          <span>Pizza. Website</span>
-
-          <div class="share">
-            <a href=""><i></i></a>
+        
+        <span>Pizza. Website</span>
+        <div class="share">
+          <a href=""><i></i></a>
+          <div class="content">
           </div>
         </div>
       </div>
     </div>
-
+    
     <div class="box-container" style="padding: 20px">
       <div class="box">
         <img src="template-2.png" alt="" />
         <div class="content">
           <span>University Website</span>
-
+          
           <div class="share">
             <a href=""><i></i></a>
           </div>
         </div>
       </div>
     </div>
-
+    
     <div class="box-container" style="padding: 20px">
       <div class="box">
         <img src="template-3.png" alt="" />
         <div class="content">
           <span>Gym Website</span>
-
+          
           <div class="share">
             <a href=""><i></i></a>
           </div>
         </div>
       </div>
     </div>
-
+    
     <div class="box-container" style="padding: 20px">
       <div class="box">
         <img src="template-4.jpg" alt="" />
         <div class="content">
           <span>Template</span>
-
+          
           <div class="share">
             <a href=""><i></i></a>
           </div>
         </div>
       </div>
     </div>
-
+    
     <div class="box-container" style="padding: 20px">
       <div class="box">
         <img src="template-5.jpg" alt="" />
         <div class="content">
           <span>Template</span>
-
+          
           <div class="share">
             <a href=""><i></i></a>
           </div>
@@ -712,20 +1016,20 @@
         <img src="template-6.jpg" alt="" />
         <div class="content">
           <span>Template</span>
-
+          
           <div class="share">
             <a href=""><i></i></a>
           </div>
         </div>
       </div>
     </div>
-
+    
     <div class="box-container" style="padding: 20px">
       <div class="box">
         <img src="template-7.png" alt="" />
         <div class="content">
           <span>Dream Wedding Website</span>
-
+          
           <div class="share">
             <a href=""><i></i></a>
           </div>
@@ -737,7 +1041,7 @@
         <img src="template-8.png" alt="" />
         <div class="content">
           <span>Makeovers Website</span>
-
+          
           <div class="share">
             <a href=""><i></i></a>
           </div>
@@ -750,20 +1054,18 @@
   <div class="btn-items">
     <a href="portfolio.html" class="btn-details"> More Details</a>
   </div>
-
+-->
+  
   <br />
   <br />
   <br />
   <br />
-
- 
-  <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-  <div class="elfsight-app-bf0f33f9-b0b6-4312-a369-e0e292cf4596" style="position: absolute;" ></div>
-
 
 
 
   <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+
+
 </body>
 
 </html>
