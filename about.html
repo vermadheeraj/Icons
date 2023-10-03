@@ -19,13 +19,13 @@
             text-transform: capitalize;
         }
 
-        ::selection {
-            background: crimson;
-        }
-
         html {
             font-size: 62%;
             overflow-x: hidden;
+        }
+
+        ::selection {
+            background: crimson;
         }
 
         html::-webkit-scrollbar {
@@ -47,7 +47,7 @@
         }
 
         .navbar a {
-            padding: 5px 5px;
+            padding: 5px 6px;
             font-size: 17px;
             background: #1a1a1a;
             flex: 1;
@@ -72,124 +72,121 @@
             color: white;
         }
 
-
-        /*-------------about-section---------------------*/
-
-        section {
-            padding: 6rem 10%;
-        }
-
-        .heading {
-            text-align: center;
-            font-size: 30px;
-            color: whitesmoke;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-        }
-
-        .heading span {
-            text-transform: uppercase;
-            color: crimson;
-        }
+        /*---------weather----------*/
 
 
-
-        .about .row {
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 2rem;
-            padding-top: 30px;
-        }
-
-        .about .row .info-container {
-            flex: 1 1 42rem;
-        }
-
-        .about .row .info-container h1 {
-            font-size: 22px;
+        header .logo {
+            font-size: 35px;
+            text-decoration: none;
+            font-weight: bolder;
             color: white;
             text-transform: uppercase;
-        }
-
-        .about .row .info-container .box-container {
-            padding: 20px 0;
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        .about .row .info-container .box-container .box {
-            flex: 1 1 22rem;
-            padding: 5px;
-
-        }
-
-        .about .row .info-container .box-container .box h3 {
-            font-size: 15px;
-            color: white;
-            padding: 5px 0;
-            font-weight: normal;
-            font-family: sans-serif;
-        }
-
-        .about .row .info-container .box-container .box span {
-            color: #aaa;
-            font-weight: lighter;
-            font-size: 18px;
-        }
-
-        .about .row .count-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-        }
-
-        .about .row .count-container .box {
-            flex: 1 1 10rem;
-            padding: 15px 20px;
-            border-radius: 5px;
-            background: #1a1a1a;
-            box-shadow: rgba(0, 0, 0, .7);
-        }
-
-        .about .row .count-container .box h3 {
-            font-size: 22px;
-            color: crimson;
-            font-weight: bold;
-        }
-
-        .about .row .count-container .box p {
-            padding: 5px;
-            font-size: 15px;
-            color: #aaa;
-        }
-
-
-        /*--------------------skills-section----------------------*/
-
-
-        .heading-2 {
-            text-align: center;
-            font-size: 30px;
-            color: whitesmoke;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-        }
-
-        .heading-2 span {
-            text-transform: uppercase;
-            color: crimson;
-        }
-
-        .skills .box-container {
+            padding-left: 40px;
             display: flex;
             align-items: center;
             justify-content: center;
-            flex-wrap: wrap;
-            padding-top: 20px;
+            padding-top: 40px;
+            padding-bottom: 10px;
+
+
+
         }
 
-        .skills .box-container .box {
+        header .logo span {
+            color: crimson;
+            font-size: 40px;
+        }
+
+
+        h1 {
+            padding: 5px 10px;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: darkslategray;
+        }
+
+        header .searchData {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 25px 10px;
+        }
+
+        header .searchData input {
+            width: 100%;
+            padding: 12px 10px;
+            border: none;
+            background: whitesmoke;
+            border: 1px solid whitesmoke;
+        }
+
+        header .searchData input::placeholder {
+            font-weight: 600;
+            font-family: sans-serif;
+            font-size: 16px;
+        }
+
+        header .searchData button {
+            padding: 12px 10px;
+            margin: 0 8px;
+            background-color: crimson;
+            color: whitesmoke;
+            font-family: sans-serif;
+            font-weight: 600;
+            border: none;
+        }
+
+        header .searchData button:hover {
+            background-color: crimson;
+        }
+
+        h2 {
+            font-size: 18px;
+            font-weight: 600;
+            color: dimgray;
+            font-family: serif;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        p {
+            font-size: 15px;
+            font-weight: 600;
+            color: whitesmoke;
+            font-family: sans-serif;
+            text-align: center;
+
+        }
+
+
+
+        .container .countryDetails {
+            padding: 12px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container .weatherDetails {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 0;
+        }
+
+        .container .countryDetails .card {
+            padding: 10px;
+
+
+        }
+
+        .container .countryDetails .card img {
+            height: 80px;
+        }
+
+        .container .weatherDetails .card {
             padding: 10px;
             text-align: center;
             box-shadow: rgba(0, 0, 0, .7);
@@ -198,108 +195,56 @@
             margin: 0 15px;
             padding-top: 8px;
             transition: .5s linear;
-
         }
 
-        .skills .box-container .box img {
-            height: 80px;
+        .container .weatherDetails .card img {
+            justify-content: center;
         }
 
-        .skills .box-container .box h3 {
-            font-size: 13px;
+
+
+        .more-details {
+            padding: 12px 10px;
+            margin: 0 8px;
+            background-color: grey;
             color: whitesmoke;
             font-family: sans-serif;
-            padding: 5px 0;
-            text-transform: uppercase;
-
+            font-weight: 600;
+            border: none;
         }
 
-        .skills .box-container .box:hover {
-            background: whitesmoke;
-            
-       
-        }
 
-        .skills .box-container .box:hover h3 {
-            color: black;
-
-        }
-
-        /*---------------------education-section-----------------*/
-
-
-        .heading-3 {
+        .heading {
             text-align: center;
             font-size: 30px;
             color: whitesmoke;
             margin-bottom: 10px;
             text-transform: uppercase;
+            font-family: serif;
         }
 
-        .heading-3 span {
+        .heading span {
             text-transform: uppercase;
             color: crimson;
         }
 
-        .education .box-container {
-            display: block;
-            align-items: center;
-            padding-top: 30px;
-
-        }
-
-        .education .box-container .box {
-            flex: 1 1 40;
-            margin-left: 10px;
-            padding: 5px;
-            padding-left: 10px;
-            padding-bottom: 5px;
-            border-left: 1px solid #aaa;
-            background: #1a1a1a;
-
-        }
-
-        .education .box-container .box i {
-            height: 4rem;
-            width: 4rem;
-            line-height: 4rem;
-            font-size: 15px;
-            background: crimson;
-            color: white;
+        .temp {
+            font-size: 60px;
+            font-weight: 600;
+            color: whitesmoke;
+            font-family: sans-serif;
             text-align: center;
-            border-radius: 50%;
-
-
-        }
-
-        .education .box-container .box span {
-            font-size: 18px;
-            color: crimson;
-            padding: 5px 8px;
-            font-weight: bold;
-        }
-
-        .education .box-container .box h3 {
-            font-size: 18px;
-            color: white;
-            font-family: sans-serif;
-            padding: 8px 5px;
-
-        }
-
-        .education .box-container .box p {
-            font-size: 13px;
-            color: white;
-            font-family: sans-serif;
-            padding: 8px 5px;
-            font-weight: normal;
-            line-height: 1.5;
 
         }
 
 
-
-
+        .video-container video {
+            width: 100%;
+            position: absolute;
+            top: 80%;
+            left: 0;
+            z-index: -1;
+        }
 
 
 
@@ -314,24 +259,22 @@
                 font-size: 55%;
             }
 
+
             .navbar span {
                 padding: 0 5px;
-                font-size: 18px;
+                font-size: 16px;
             }
 
-            .navbar i{
+            .navbar i {
 
                 padding: 0 5px;
             }
 
-
-            .education .box-container {
-                align-items: center;
-                justify-content: center;
-                padding-top: 30px;
-                flex-wrap: wrap;
-
+            .container .weatherDetails {
+                display: block;
+                padding: 12px 0;
             }
+
 
         }
 
@@ -352,208 +295,149 @@
 <body>
 
     <nav class="navbar">
-
-        <a href="home.html"><i class="fas fa-home"></i><span>home</span></a>
+        <a href="index.html"><i class="fas fa-home"></i><span>home</span></a>
         <a href="about.html"><i class="fas fa-user"></i><span>about</span></a>
         <a href="portfolio.html"><i class="fas fa-briefcase"></i><span>work</span></a>
         <a href="blog.html"><i class="fas fa-sun"></i><span>weather</span></a>
         <a href="contact.html"><i class="fas fa-address-book"></i><span>contact</span></a>
-
-    </nav>
-
+      </nav>
 
 
-    <section class="about">
 
-        <h1 class="heading-2">about <span>me</span></h1>
+    <header>
+        <br>
+        <br>
+        <h1 class="heading"><span>Weather</span> App</h1>
 
-        <div class="row">
+        <form onsubmit="getData(event)" class="searchData">
+            <input type="text" name="" id="inputBox" placeholder="Enter the city name">
+            <button>Search</button>
+        </form>
 
-            <div class="info-container">
 
-                <h1>Personal Information</h1>
-
-                <div class="box-container">
-
-                    <div class="box">
-                        <h3><span>Name</span>: Dheeraj Verma</h3>
-                        <h3><span>Age</span>: 23</h3>
-                        <h3><span>Email</span>: dheerajverma1198@gmail.com</h3>
-                        <h3><span>Address</span>: Bhopal, India - 400104</h3>
-                    </div>
-
-                    <div class="box">
-                        <h3><span>Freelance</span>: Avaiable</h3>
-                        <h3><span>Skill</span>: Web Developer</h3>
-                        <h3><span>Language</span>: Hindi And English</h3>
-                        <h3><span>Phone no</span>: 8602912044</h3>
-                    </div>
+    </header>
 
 
 
 
+    <div class="container">
+
+
+        <section class="cityWeatherData">
+
+            <div class="countryDetails details">
+
+                <div class="card">
+
+                    <img src="" alt="icon" id="logoImage">
+                    <h2 id="weatherStatus">__</h2>
+
+                </div>
+
+                <div class="card">
+                    <p class="temp"> <span id="temprature">__</span>&#8451;</p>
+                    <h2 class="temp-1"></h2>
                 </div>
 
             </div>
 
 
-            <div class="count-container">
 
-                <div class="box">
-                    <h3>20+</h3>
-                    <p>Project Done</p>
+            <div class="weatherDetails details">
+
+                <div class="card">
+                    <h2>Country Name</h2>
+                    <p id="countryName">__</p>
                 </div>
 
-                <div class="box">
-                    <h3>12+</h3>
-                    <p>Language Done</p>
+                <div class="card">
+                    <h2>state Name</h2>
+                    <p id="stateName">__</p>
                 </div>
 
-                <div class="box">
-                    <h3>2+</h3>
-                    <p>Desgin Experience</p>
+                <div class="card">
+                    <h2>City Name</h2>
+                    <p id="cityName">__</p>
                 </div>
 
             </div>
 
 
-        </div>
 
-    </section>
+            <div class="weatherDetails details">
+
+                <div class="card">
+                    <h2>Visibility</h2>
+                    <p id="visibility">__ <span>km</span></p>
+                </div>
+
+                <div class="card">
+                    <h2>Wind</h2>
+                    <p id="wind">__ km/h</p>
+                </div>
+
+                <div class="card">
+                    <h2>Cloud</h2>
+                    <p id="cloud">__</p>
+                </div>
 
 
-    <section class="skills">
 
-        <h1 class="heading"><span>my</span> skills</h1>
+                <div class="card">
+                    <h2>Humidity</h2>
+                    <p id="humidity">__</p>
+                </div>
 
-        <div class="box-container">
+                <div class="card">
+                    <h2>Wind Speed</h2>
+                    <p id="windSpeed">__ <span>KMPH</span></p>
+                </div>
 
-            <div class="box">
-                <img src="html-5.png" alt="">
-                <h3>html</h3>
+
+                <div class="card">
+                    <h2>Local Time</h2>
+                    <p id="localTime">__</p>
+                </div>
+
+
+                <div class="card">
+                    <h2>Day</h2>
+                    <p id="day">__</p>
+                </div>
+
             </div>
 
-            <div class="box">
-                <img src="css-3.png" alt="">
-                <h3>css</h3>
-            </div>
 
-            <div class="box">
-                <img src="java-script.png" alt="">
-                <h3>java-script</h3>
-            </div>
 
-            <div class="box">
-                <img src="php.png" alt="">
-                <h3>php</h3>
-            </div>
+            <div class="weatherDetails details">
 
-            <div class="box">
-                <img src="python.png" alt="">
-                <h3>python</h3>
-            </div>
+                <div class="card">
+                    <h2>Real Feels</h2>
+                    <p id="realFeels">__</p>
+                </div>
 
-            <div class="box">
-                <img src="figma.png" alt="">
-                <h3>figma</h3>
+                <div class="card">
+                    <h2>Pressure</h2>
+                    <p id="pressure">__</p>
+                </div>
+
+                <div class="card">
+                    <h2>City Name</h2>
+                    <p id="cityName">__</p>
+                </div>
+
             </div>
 
 
-        </div>
+        </section>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
 
 
-        <div class="box-container">
-
-
-            <div class="box">
-                <img src="react.png" alt="">
-                <h3>react</h3>
-            </div>
-
-            <div class="box">
-                <img src="nodejs_919825.png" alt="">
-                <h3>nodejs</h3>
-            </div>
-
-            <div class="box">
-                <img src="c.png" alt="">
-                <h3>c++</h3>
-            </div>
-    
-
-            <div class="box">
-                <img src="wordpress.png" alt="">
-                <h3>wordpress</h3>
-            </div>
-
-            <div class="box">
-                <img src="mysql.png" alt="">
-                <h3>my sql</h3>
-            </div>
-
-        </div>
-
-        <div class="box-container">
-
-            
-            <div class="box">
-                <img src="icons8-flutter-144.png" alt="">
-                <h3>flutter</h3>
-            </div>
-            
-            <div class="box">
-            <img src="icons8-bootstrap-144.png" alt="">
-            <h3>bootstrap5</h3>
-            </div>
-
-            
-            <div class="box">
-                <img src="mongodb.png" alt="">
-                <h3>mongodb</h3>
-            </div>
-        </div>
-        
-       
-        
     </div>
-
-    </section>
-
-
-    <section class="education">
-
-        <h1 class="heading-3"><span>my</span> education</h1>
-
-        <div class="box-container">
-
-            <div class="box">
-                <i class="fas fa-graduation-cap"></i>
-                <span>2021</span>
-                <h3>Bachelor Of Technology</h3>
-                <p>Computer Science Engineering</p>
-            </div>
-
-            <div class="box">
-                <i class="fas fa-graduation-cap"></i>
-                <span>2022</span>
-                <h3>Web Development</h3>
-                <p>Full Course Website Development </p>
-                <p>HTML, CSS, Javascript, PHP, MYSQL</p>
-            </div>
-
-            <div class="box">
-                <i class="fas fa-graduation-cap"></i>
-                <span>2022-2023</span>
-                <h3>Full Stack Developer 2.0</h3>
-                <p>Full Stack Developer Course </p>
-                <p>React, Angular, Node JS, Express JS, Mongo DB, HTML5, CSS3</p>
-            </div>
-
-        </div>
-
-
-    </section>
-
 
 
 
@@ -564,5 +448,6 @@
 
 </body>
 
+<script src="script.js"></script>
 
 </html>
