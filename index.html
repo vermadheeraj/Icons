@@ -11,7 +11,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 
 
-
   <style>
     * {
       margin: 0;
@@ -624,7 +623,7 @@
 
 <body>
   <nav class="navbar">
-    <a href="home.html"><i class="fas fa-home"></i><span>home</span></a>
+    <a href="index.html"><i class="fas fa-home"></i><span>home</span></a>
     <a href="about.html"><i class="fas fa-user"></i><span>about</span></a>
     <a href="portfolio.html"><i class="fas fa-briefcase"></i><span>work</span></a>
     <a href="blog.html"><i class="fas fa-sun"></i><span>weather</span></a>
@@ -660,54 +659,54 @@
     <h1 class="heading"><span>My</span> Skills</h1>
 
     <div class="box-container">
-      <div class="box">
+      <div class="box" data-aos="fade-down">
         <img src="html-5.png" alt="" />
         <h3>html</h3>
       </div>
 
-      <div class="box">
+      <div class="box" data-aos="fade-down">
         <img src="css-3.png" alt="" />
         <h3>css</h3>
       </div>
 
-      <div class="box">
+      <div class="box" data-aos="fade-in">
         <img src="java-script.png" alt="" />
         <h3>java-script</h3>
       </div>
 
-      <div class="box">
+      <div class="box" data-aos="fade-in">
         <img src="php.png" alt="" />
         <h3>php</h3>
       </div>
 
-      <div class="box">
+      <div class="box" data-aos="fade-down">
         <img src="python.png" alt="" />
         <h3>python</h3>
       </div>
 
-      <div class="box">
+      <div class="box" data-aos="fade-down">
         <img src="figma.png" alt="" />
         <h3>figma</h3>
       </div>
     </div>
 
     <div class="box-container">
-      <div class="box">
+      <div class="box" data-aos="fade-in">
         <img src="react.png" alt="" />
         <h3>react</h3>
       </div>
 
-      <div class="box">
+      <div class="box" data-aos="fade-in">
         <img src="wordpress.png" alt="" />
         <h3>wordpress</h3>
       </div>
 
-      <div class="box">
+      <div class="box" data-aos="fade-down">
         <img src="mysql.png" alt="" />
         <h3>my sql</h3>
       </div>
 
-      <div class="box">
+      <div class="box" data-aos="fade-down">
         <img src="c.png" alt="" />
         <h3>c++</h3>
       </div>
@@ -1064,6 +1063,17 @@
 
 
   <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+
+   <!--------javascript for toggle menu-------->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+   <script>
+ 
+     AOS.init({
+       delay: 400,
+       duration: 1000
+     })
+   </script>
 
 
 </body>
