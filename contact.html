@@ -1,346 +1,365 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Personal Information</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            text-decoration: none;
-            outline: none;
-            border: none;
-            text-transform: capitalize;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        outline: none;
+        border: none;
+        text-transform: capitalize;
+      }
 
+      html {
+        font-size: 62%;
+        overflow-x: hidden;
+      }
+
+      ::selection {
+        background: crimson;
+      }
+
+      html::-webkit-scrollbar {
+        width: 1rem;
+      }
+
+      body {
+        background: #0d0d0d;
+      }
+
+      .navbar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        z-index: 1000;
+        align-items: flex-end;
+      }
+
+      .navbar a {
+        padding: 5px 6px;
+        font-size: 17px;
+        background: #1a1a1a;
+        flex: 1;
+        color: white;
+        text-align: center;
+        font-family: math;
+        transition: 0.2s linear;
+      }
+
+      .navbar i {
+        color: crimson;
+        padding-right: 8px;
+      }
+
+      .navbar a:hover {
+        background: crimson;
+        padding-bottom: 30px;
+      }
+
+      .navbar a:hover i {
+        color: white;
+      }
+
+      section {
+        padding: 8rem 8%;
+      }
+
+      .heading {
+        text-align: center;
+        font-size: 30px;
+        color: whitesmoke;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+      }
+
+      .heading span {
+        text-transform: uppercase;
+        color: crimson;
+      }
+
+      .row {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+      }
+
+      .row .info-container {
+        width: 35rem;
+        padding-top: 30px;
+      }
+
+      .row .info-container h2 {
+        font-size: 18px;
+        text-transform: uppercase;
+        font-family: sans-serif;
+        color: crimson;
+        padding-bottom: 30px;
+      }
+
+      .row .info-container .box-container {
+        padding: 8px 0;
+      }
+
+      .row .info-container .box-container .box {
+        display: flex;
+        gap: 2rem;
+      }
+
+      .row .info-container .box-container .box {
+        font-size: 15px;
+        color: crimson;
+      }
+
+      .row .info-container .box-container .box h3 {
+        font-size: 17px;
+        font-family: sans-serif;
+        color: white;
+        padding-bottom: 10px;
+      }
+
+      .row .info-container .box-container .box p {
+        font-size: 12px;
+        font-family: sans-serif;
+        color: #aaa;
+        padding-bottom: 10px;
+      }
+
+      form {
+        flex: 1 1 40rem;
+        padding-top: 30px;
+      }
+
+      .inputbox {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      input {
+        width: 48%;
+      }
+
+      .inputbox input,
+      textarea {
+        border-radius: 5px;
+        padding: 8px 8px;
+        font-size: 12px;
+        color: white;
+        text-transform: none;
+        margin: 5px 0;
+        background: #1a1a1a;
+        font-weight: bold;
+      }
+
+      textarea {
+        width: 80%;
+        border-radius: 5px;
+        font-size: 12px;
+        font-weight: bold;
+        resize: none;
+      }
+
+      .row form .btn {
+        display: inline-block;
+        margin-top: 5px;
+        padding: 8px;
+        font-size: 18px;
+        background: crimson;
+        color: white;
+        border-radius: 5px;
+        font-family: serif;
+        cursor: pointer;
+      }
+
+      .share {
+        padding-top: 20px;
+      }
+
+      .online-icon img {
+        height: 35px;
+        padding: 0 5px;
+      }
+
+      .step-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 10px 8px;
+      }
+
+      .step-container .step {
+        background: whitesmoke;
+        padding: 10px;
+        margin: 10px;
+        border-radius: 10px;
+        border: 2px solid black;
+        box-shadow: 8px 5px rgba(0, 0, 0, 0.1);
+        flex: 1 1 10rem;
+        align-items: center;
+      }
+
+      .step-container .step span {
+        font-size: 22px;
+        color: #ee0548;
+        font-weight: bolder;
+      }
+
+      .step-container .step h3 {
+        font-size: 20px;
+        color: #ee0548;
+        padding: 7px;
+        font-family: sans-serif;
+      }
+
+      .step-container .step h5 {
+        font-size: 13px;
+        color: rgb(110, 104, 104);
+        padding: 3px 3px;
+        font-family: sans-serif;
+        text-align: left;
+      }
+
+      @media (max-width: 800px) {
         html {
-            font-size: 62%;
-            overflow-x: hidden;
+          font-size: 55%;
         }
 
-        ::selection {
-            background: crimson;
+        .navbar span {
+          padding: 0 5px;
+          font-size: 18px;
         }
 
-        html::-webkit-scrollbar {
-            width: 1rem;
-        }
-
-        body {
-            background: #0d0d0d;
-        }
-
-        .navbar {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            display: flex;
-            z-index: 1000;
-            align-items: flex-end;
-        }
-
-        .navbar a {
-            padding: 8px 5px;
-            font-size: 20px;
-            background: #1a1a1a;
-            flex: 1;
-            color: white;
-            text-align: center;
-            font-family: serif;
-            transition: .2s linear;
-
-        }
-        
         .navbar i {
-            color: crimson;
-            padding-right: 8px;
-
+          padding: 0 5px;
         }
+      }
 
-        .navbar a:hover {
-            background: crimson;
-            padding-bottom: 30px;
+      @media (max-width: 500px) {
+        html {
+          font-size: 50%;
         }
-
-        .navbar a:hover i {
-            color: white;
-        }
-
-
-        section {
-            padding: 8rem 8%;
-        }
-
-
-        .heading {
-            text-align: center;
-            font-size: 30px;
-            color: whitesmoke;
-            margin-bottom: 30px;
-            text-transform: uppercase;
-        }
-
-        .heading span {
-            text-transform: uppercase;
-            color: crimson;
-        }
-
-
-        .row {
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 2rem;
-        }
-
-        .row .info-container {
-            width: 35rem;
-            padding-top: 30px;
-        }
-
-        .row .info-container h2 {
-            font-size: 18px;
-            text-transform: uppercase;
-            font-family: sans-serif;
-            color: crimson;
-            padding-bottom: 30px;
-        }
-
-        .row .info-container .box-container {
-            padding: 8px 0;
-
-        }
-
-        .row .info-container .box-container .box {
-            display: flex;
-            gap: 2rem;
-        }
-
-        .row .info-container .box-container .box  {
-            font-size: 15px;
-            color: crimson;
-
-        }
-
-        .row .info-container .box-container .box h3 {
-            font-size: 17px;
-            font-family: sans-serif;
-            color: white;
-            padding-bottom: 10px;
-        }
-
-
-        .row .info-container .box-container .box p {
-            font-size: 12px;
-            font-family: sans-serif;
-            color: #aaa;
-            padding-bottom: 10px;
-        }
-
-
-        form {
-            flex: 1 1 40rem;
-            padding-top: 30px;
-        }
-
-        .inputbox {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-
-        }
-
-        input {
-            width: 48%;
-        }
-
-        .inputbox input,
-        textarea {
-            border-radius: 5px;
-            padding: 8px 8px;
-            font-size: 12px;
-            color: white;
-            text-transform: none;
-            margin: 5px 0;
-            background: #1a1a1a;
-            font-weight: bold;
-        }
-
-        textarea {
-            width: 80%;
-            border-radius: 5px;
-            font-size: 12px;
-            font-weight: bold;
-            resize: none;
-        }
-
-        .row form .btn {
-            display: inline-block;
-            margin-top: 5px;
-            padding: 8px;
-            font-size: 18px;
-            background: crimson;
-            color: white;
-            border-radius: 5px;
-            font-family: serif;
-            cursor: pointer;
-        }
-
-        .share {
-            padding-top: 20px;
-        }
-
-        .online-icon img {
-            height: 35px;
-            padding: 0 5px;
-        }
-
-
-
-
-
-
-        @media (max-width:800px) {
-
-            html {
-                font-size: 55%;
-            }
-
-            .navbar span {
-                padding: 0 5px;
-                font-size: 15px;
-            }
-
-            .navbar i{
-
-                padding: 0 5px;
-            }
-
-        }
-
-
-        @media (max-width:500px) {
-
-            html {
-                font-size: 50%;
-            }
-
-        }
+      }
     </style>
+  </head>
 
-
-
-</head>
-
-<body>
-
+  <body>
     <nav class="navbar">
-
-       
-        <a href="index.html"><i class="fas fa-home"></i><span>home</span></a>
-        <a href="about.html"><i class="fas fa-user"></i><span>about</span></a>
-        <a href="portfolio.html"><i class="fas fa-briefcase"></i><span>work</span></a>
-        <a href="blog.html"><i class="fas fa-sun"></i><span>weather</span></a>
-        <a href="contact.html"><i class="fas fa-address-book"></i><span>contact</span></a>>
-
+      <a href="home.html"><i class="fas fa-home"></i><span>home</span></a>
+      <a href="about.html"><i class="fas fa-user"></i><span>about</span></a>
+      <a href="portfolio.html"
+        ><i class="fas fa-briefcase"></i><span>work</span></a
+      >
+      <a href="blog.html"><i class="fas fa-sun"></i><span>weather</span></a>
+      <a href="contact.html"
+        ><i class="fas fa-address-book"></i><span>contact</span></a
+      >
     </nav>
 
+    <br />
+    <br />
+
+    
 
     <section class="contact">
+      <h1 class="heading">contact <span>me</span></h1>
 
-        <h1 class="heading">contact <span>me</span></h1>
+      <div class="row">
+        <div class="info-container">
+          <h2>my number and address, email</h2>
 
-
-        <div class="row">
-
-            <div class="info-container">
-                <h2>my number and
-                    address, email </h2>
-
-                <div class="box-container">
-
-
-                    <div class="box">
-                        <i class="fas fa-phone"></i>
-                        <div class="info">
-                            <h3>Phone No</h3>
-                            <p>8602912044</p>
-                        </div>
-                    </div>
-
-
-                    <div class="box">
-                        <i class="fas fa-map"></i>
-                        <div class="info">
-                            <h3>Address</h3>
-                            <p>Bhopal, india - 400104</p>
-                        </div>
-                    </div>
-
-                    <div class="box">
-                        <i class="fas fa-envelope"></i>
-                        <div class="info">
-                            <h3>Email</h3>
-                            <p>dheerajverma1198@gmail.com</p>
-                        </div>
-                    </div>
-
-                </div>
-
-
-
-                <div class="share">
-                    <i class="online-icon"><a href=""><img src="facebook.png" alt=""></a></i>
-                    <i class="online-icon"><a href=""><img src="twitter.png" alt=""></a></i>
-                    <i class="online-icon"><a href=""><img src="linkedin.png" alt=""></a></i>
-                    <i class="online-icon"><a href=""><img src="instagram.png" alt=""></a></i>
-
-                </div>
-
-
+          <div class="box-container">
+            <div class="box">
+              <i class="fas fa-phone"></i>
+              <div class="info">
+                <h3>Phone No</h3>
+                <p>8602912044</p>
+              </div>
             </div>
 
+            <div class="box">
+              <i class="fas fa-map"></i>
+              <div class="info">
+                <h3>Address</h3>
+                <p>Bhopal, india - 400104</p>
+              </div>
+            </div>
 
-            <form action="">
+            <div class="box">
+              <i class="fas fa-envelope"></i>
+              <div class="info">
+                <h3>Email</h3>
+                <p>dheerajverma1198@gmail.com</p>
+              </div>
+            </div>
+          </div>
 
-                <div class="inputbox">
-                    <input type="text" name="name" id="name" placeholder=" Your Name">
-                    <input type="number" name="number" id="number" placeholder=" Your number">
-                </div>
-
-                <div class="inputbox">
-                    <input type="email" name="email" id="email" placeholder=" Your Email">
-                    <input type="text" name="phone" id="phone" placeholder=" Subject">
-                </div>
-
-                <textarea name="" id="" cols="30" rows="10" placeholder=" Your Message"></textarea>
-
-                <input type="submit" value="send Message" class="btn">
-
-            </form>
-
-
-
+          <div class="share">
+            <i class="online-icon"
+              ><a href=""><img src="facebook.png" alt="" /></a
+            ></i>
+            <i class="online-icon"
+              ><a href=""><img src="twitter.png" alt="" /></a
+            ></i>
+            <i class="online-icon"
+              ><a href=""><img src="linkedin.png" alt="" /></a
+            ></i>
+            <i class="online-icon"
+              ><a href=""><img src="instagram.png" alt="" /></a
+            ></i>
+          </div>
         </div>
 
+        <form action="">
+          <div class="inputbox">
+            <input type="text" name="name" id="name" placeholder=" Your Name" />
+            <input
+              type="number"
+              name="number"
+              id="number"
+              placeholder=" Your number"
+            />
+          </div>
+
+          <div class="inputbox">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder=" Your Email"
+            />
+            <input type="text" name="phone" id="phone" placeholder=" Subject" />
+          </div>
+
+          <textarea
+            name=""
+            id=""
+            cols="30"
+            rows="10"
+            placeholder=" Your Message"
+          ></textarea>
+
+          <input type="submit" value="send Message" class="btn" />
+        </form>
+      </div>
     </section>
 
+    <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+  <div class="elfsight-app-bf0f33f9-b0b6-4312-a369-e0e292cf4596" style="position: absolute;" ></div>
 
-
-
-
-
-
-
-
-</body>
-
-
+  </body>
 </html>
