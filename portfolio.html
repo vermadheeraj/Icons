@@ -147,6 +147,95 @@
       padding: 10px;
     }
 
+    ul {
+      display: flex;
+      /* width: calc(80% - 2rem); */
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+    }
+
+    li {
+      padding: 0;
+    }
+
+    img {
+      max-width: 100%;
+      width: 100%;
+      object-fit: cover;
+      transition: all 0.2s ease;
+    }
+
+    ul:is(:hover, :focus-within) img {
+      opacity: calc(0.1 + (var(--active-lerp, 0) * 0.9));
+      filter: grayscale(calc(1 - var(--active-lerp, 0)));
+    }
+
+    :root {
+      --lerp-0: 1;
+      --lerp-1: 0.5787037;
+      --lerp-2: 0.2962963;
+      --lerp-3: 0.125;
+      --lerp-4: 0.037037;
+      --lerp-5: 0.0046296;
+      --lerp-6: 0;
+    }
+
+    a {
+      outline-offset: 4px;
+    }
+
+    li {
+      flex: calc(0.1 + (var(--active-lerp, 0) * 1));
+      transition: flex 0.2s ease;
+    }
+
+    li:is(:hover, :focus-within) {
+      --active-lerp: var(--lerp-0);
+      z-index: 7;
+    }
+
+    li:has(+ li:is(:hover, :focus-within)),
+    li:is(:hover, :focus-within)+li {
+      --active-lerp: var(--lerp-1);
+      z-index: 6;
+    }
+
+    li:has(+ li + li:is(:hover, :focus-within)),
+    li:is(:hover, :focus-within)+li+li {
+      --active-lerp: var(--lerp-2);
+      z-index: 5;
+    }
+
+    li:has(+ li + li + li:is(:hover, :focus-within)),
+    li:is(:hover, :focus-within)+li+li+li {
+      --active-lerp: var(--lerp-3);
+      z-index: 4;
+    }
+
+    li:has(+ li + li + li + li:is(:hover, :focus-within)),
+    li:is(:hover, :focus-within)+li+li+li+li {
+      --active-lerp: var(--lerp-4);
+      z-index: 3;
+    }
+
+    li:has(+ li + li + li + li + li:is(:hover, :focus-within)),
+    li:is(:hover, :focus-within)+li+li+li+li+li {
+      --active-lerp: var(--lerp-5);
+      z-index: 2;
+    }
+
+    li:has(+ li + li + li + li + li + li:is(:hover, :focus-within)),
+    li:is(:hover, :focus-within)+li+li+li+li+li+li {
+      --active-lerp: var(--lerp-6);
+      z-index: 1;
+    }
+
+    .result img {
+      height: 500px;
+      width: 400px;
+    }
+
     @media (max-width: 800px) {
       html {
         font-size: 55%;
@@ -171,6 +260,12 @@
       html {
         font-size: 50%;
       }
+
+      .result img {
+        height: 350px;
+        width: 600px;
+
+      }
     }
   </style>
 </head>
@@ -188,27 +283,122 @@
   <br />
   <br />
 
-
   <h1 class="heading"><span>my</span>work</h1>
-  <br>
-  <h1 class="heading"><span></span>Best Responsive Mobile Desgin</h1>
-
-  <br>
-  <br>
-  <div class="scroll-container">
-    <img src="mob1.png" alt="Cinque Terre" height="400px">
-    <img src="mob2.png" alt="Forest" height="400px">
-    <img src="mob3.png" alt="Cinque Terre" height="400px">
-    <img src="mob4.png" alt="Forest" height="400px">
-    <img src="mob5.png" alt="Cinque Terre" height="400px">
-    <img src="mob6.png" alt="Forest" height="400px">
-    <img src="mob7.png" alt="Forest" height="400px">
-    <img src="mob8.png" alt="Cinque Terre" height="400px">
-    <img src="mob9.png" alt="Forest" height="400px">
-    <img src="mob10.png" alt="Forest" height="400px">
 
 
+  <div style="padding-top: 30px;">
+    <ul class="results">
+      <li class="result">
+        <a href="#">
+          <img src="./banner/Untitled-4.png" alt="">
+        </a>
+      </li>
+      <li class="result">
+        <a href="#"> <img src="./banner/Untitled-5.png" alt=""></a>
+      </li>
+      <li class="result">
+        <a href="#"> <img src="./banner/Untitled-6.png" alt=""></a>
+      </li>
+      <li class="result">
+        <a href="#"> <img src="./banner/Untitled-7.png" alt="">
+      <li class="result">
+        <a href="#"> <img src="./banner/Untitled-9 (1).png" alt=""></a>
+      </li>
+      <li class="result">
+        <a href="#"> <img src="./banner/Untitled-11.png" alt=""></a>
+      </li>
+      <li class="result">
+        <a href="#"> <img src="./banner/Untitled-14.png" alt=""></a>
+      </li>
+      <li class="result">
+        <a href="#"> <img src="./banner/Untitled-15.png" alt=""></a>
+      </li>
+
+      <li class="result">
+        <a href="#"> <img src="./banner/Untitled-17.png" alt=""></a>
+      </li>
+      <li class="result">
+        <a href="#"> <img src="./banner/Untitled-13.png" alt=""></a>
+      </li>
+    </ul>
   </div>
+
+
+
+  <section>
+    <h1 class="heading"><span>My-Website </span>Design</h1>
+    <div class="box-container">
+      <div class="box">
+        <img src="./banner/Untitled-2 (4).png" alt="">
+      </div>
+      <div class="box">
+        <img src="./banner/Untitled-2 (5).png" alt="">
+      </div>
+      <div class="box">
+        <img src="/banner/Untitled-9 (2).png" alt="">
+      </div>
+      <div class="box">
+        <img src="./banner/Untitled-9.png" alt="">
+      </div>
+      <div class="box">
+        <img src="./banner/Untitled-12.png" alt="">
+      </div>
+      <div class="box">
+        <img src="./banner/Untitled-8.png" alt="">
+      </div>
+      <div class="box">
+        <img src="./banner/Untitled-8 (1).png" alt="">
+      </div>
+      <div class="box">
+        <img src="./banner/Untitled-12 (1).png" alt="">
+      </div>
+    </div>
+  </section>
+
+
+
+  <section>
+    <h1 class="heading"><span>My-Website </span>Design</h1>
+    <div class="box-container">
+      <div class="box">
+        <img src="project1.png" alt="">
+      </div>
+
+      <div class="box">
+        <img src="project2.png" alt="">
+      </div>
+      <div class="box">
+        <img src="project4.png" alt="">
+      </div>
+
+      <div class="box">
+        <img src="template-1.png" alt="">
+      </div>
+
+      <div class="box">
+        <img src="template-2.png" alt="">
+      </div>
+      <div class="box">
+        <img src="template-3.png" alt="">
+      </div>
+      <div class="box">
+        <img src="template-7.png" alt="">
+      </div>
+
+      <div class="box">
+        <img src="project8.png" alt="">
+      </div>
+
+      <div class="box">
+        <img src="project10.png" alt="">
+      </div>
+
+      <div class="box">
+        <img src="project11.png" alt="">
+      </div>
+    </div>
+
+  </section>
 
   <section>
     <div class="box-container">
@@ -348,24 +538,25 @@
   </section>
 
   <script>
-
     // gesture detect
-    document.addEventListener('touchstart', handleTouchStart, false);
-    document.addEventListener('touchmove', handleTouchMove, false);
+    document.addEventListener("touchstart", handleTouchStart, false);
+    document.addEventListener("touchmove", handleTouchMove, false);
 
     var xDown = null;
     var yDown = null;
 
     function getTouches(evt) {
-      return evt.touches ||             // browser API
-        evt.originalEvent.touches; // jQuery
+      return (
+        evt.touches || // browser API
+        evt.originalEvent.touches
+      ); // jQuery
     }
 
     function handleTouchStart(evt) {
       const firstTouch = getTouches(evt)[0];
       xDown = firstTouch.clientX;
       yDown = firstTouch.clientY;
-    };
+    }
 
     function handleTouchMove(evt) {
       if (!xDown || !yDown) {
@@ -380,19 +571,19 @@
 
       if (Math.abs(xDiff) > Math.abs(yDiff)) {
         if (xDiff > 0) {
-          if (scrollPos < window.innerWidth * 0.6 * slides.length) scrollPos += 100;
+          if (scrollPos < window.innerWidth * 0.6 * slides.length)
+            scrollPos += 100;
         } else {
           if (scrollPos != 0) scrollPos -= 100;
         }
 
         slides.forEach((slide, index) => {
-
           /*if (slide == slides[slides.length - 1]) {
-  
-            if (window.innerWidth * 0.8 * slides.length < scrollPos) {
-              return;
-            }
-          }*/
+ 
+          if (window.innerWidth * 0.8 * slides.length < scrollPos) {
+            return;
+          }
+        }*/
 
           //console.log(slide);
           let photo = slide.querySelector(".photo");
@@ -400,12 +591,11 @@
           photo.style.transform = `translateX(-${scrollPos}px)`;
           text.style.transform = `translateX(-${scrollPos}px)`;
         });
-
       }
       /* reset values */
       xDown = null;
       yDown = null;
-    };
+    }
 
     /* gallery */
 
@@ -418,44 +608,32 @@
         var isShowing = false;
 
         if ($(this).hasClass("show")) {
-          isShowing = true
+          isShowing = true;
         }
 
         if ($("div.cards").hasClass("showing")) {
           // a card is already in view
-          $("div.card.show")
-            .removeClass("show");
+          $("div.card.show").removeClass("show");
 
           if (isShowing) {
             // this card was showing - reset the grid
-            $("div.cards")
-              .removeClass("showing");
+            $("div.cards").removeClass("showing");
           } else {
             // this card isn't showing - get in with it
-            $(this)
-              .css({ zIndex: zindex })
-              .addClass("show");
-
+            $(this).css({ zIndex: zindex }).addClass("show");
           }
 
           zindex++;
-
         } else {
           // no cards in view
-          $("div.cards")
-            .addClass("showing");
-          $(this)
-            .css({ zIndex: zindex })
-            .addClass("show");
+          $("div.cards").addClass("showing");
+          $(this).css({ zIndex: zindex }).addClass("show");
 
           zindex++;
         }
-
       });
     });
   </script>
-
-
 </body>
 
 </html>
