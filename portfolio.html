@@ -171,70 +171,32 @@
       filter: grayscale(calc(1 - var(--active-lerp, 0)));
     }
 
-    :root {
-      --lerp-0: 1;
-      --lerp-1: 0.5787037;
-      --lerp-2: 0.2962963;
-      --lerp-3: 0.125;
-      --lerp-4: 0.037037;
-      --lerp-5: 0.0046296;
-      --lerp-6: 0;
-    }
+    .row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
 
-    a {
-      outline-offset: 4px;
-    }
+/* Create four equal columns that sits next to each other */
+.column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
 
-    li {
-      flex: calc(0.1 + (var(--active-lerp, 0) * 1));
-      transition: flex 0.2s ease;
-    }
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+ 
+}
 
-    li:is(:hover, :focus-within) {
-      --active-lerp: var(--lerp-0);
-      z-index: 7;
-    }
-
-    li:has(+ li:is(:hover, :focus-within)),
-    li:is(:hover, :focus-within)+li {
-      --active-lerp: var(--lerp-1);
-      z-index: 6;
-    }
-
-    li:has(+ li + li:is(:hover, :focus-within)),
-    li:is(:hover, :focus-within)+li+li {
-      --active-lerp: var(--lerp-2);
-      z-index: 5;
-    }
-
-    li:has(+ li + li + li:is(:hover, :focus-within)),
-    li:is(:hover, :focus-within)+li+li+li {
-      --active-lerp: var(--lerp-3);
-      z-index: 4;
-    }
-
-    li:has(+ li + li + li + li:is(:hover, :focus-within)),
-    li:is(:hover, :focus-within)+li+li+li+li {
-      --active-lerp: var(--lerp-4);
-      z-index: 3;
-    }
-
-    li:has(+ li + li + li + li + li:is(:hover, :focus-within)),
-    li:is(:hover, :focus-within)+li+li+li+li+li {
-      --active-lerp: var(--lerp-5);
-      z-index: 2;
-    }
-
-    li:has(+ li + li + li + li + li + li:is(:hover, :focus-within)),
-    li:is(:hover, :focus-within)+li+li+li+li+li+li {
-      --active-lerp: var(--lerp-6);
-      z-index: 1;
-    }
-
-    .result img {
-      height: 500px;
-      width: 400px;
-    }
 
     @media (max-width: 800px) {
       html {
@@ -286,77 +248,36 @@
   <h1 class="heading"><span>my</span>work</h1>
 
 
-  <div style="padding-top: 30px;">
-    <ul class="results">
-      <li class="result">
-        <a href="#">
-          <img src="./banner/Untitled-4.png" alt="">
-        </a>
-      </li>
-      <li class="result">
-        <a href="#"> <img src="./banner/Untitled-5.png" alt=""></a>
-      </li>
-      <li class="result">
-        <a href="#"> <img src="./banner/Untitled-6.png" alt=""></a>
-      </li>
-      <li class="result">
-        <a href="#"> <img src="./banner/Untitled-7.png" alt="">
-      <li class="result">
-        <a href="#"> <img src="./banner/Untitled-9 (1).png" alt=""></a>
-      </li>
-      <li class="result">
-        <a href="#"> <img src="./banner/Untitled-11.png" alt=""></a>
-      </li>
-      <li class="result">
-        <a href="#"> <img src="./banner/Untitled-14.png" alt=""></a>
-      </li>
-      <li class="result">
-        <a href="#"> <img src="./banner/Untitled-15.png" alt=""></a>
-      </li>
-
-      <li class="result">
-        <a href="#"> <img src="./banner/Untitled-17.png" alt=""></a>
-      </li>
-      <li class="result">
-        <a href="#"> <img src="./banner/Untitled-13.png" alt=""></a>
-      </li>
-    </ul>
-  </div>
-
 
 
   <section>
-    <h1 class="heading"><span>My-Website </span>Design</h1>
-    <div class="box-container">
-      <div class="box">
-        <img src="./banner/Untitled-2 (4).png" alt="">
-      </div>
-      <div class="box">
-        <img src="./banner/Untitled-2 (5).png" alt="">
-      </div>
-      <div class="box">
-        <img src="/banner/Untitled-9 (2).png" alt="">
-      </div>
-      <div class="box">
-        <img src="./banner/Untitled-9.png" alt="">
-      </div>
-      <div class="box">
-        <img src="./banner/Untitled-12.png" alt="">
-      </div>
-      <div class="box">
-        <img src="./banner/Untitled-8.png" alt="">
-      </div>
-      <div class="box">
-        <img src="./banner/Untitled-8 (1).png" alt="">
-      </div>
-      <div class="box">
-        <img src="./banner/Untitled-12 (1).png" alt="">
+    <div class="row">
+      <div class="column">
+        <img src="banner/NuageNetz-1.webp">
+        <img src="banner/NuageNetz-2.webp">
+        <img src="banner/NuageNetz-3.webp">
+        <img src="banner/NuageNetz-5.webp">
+        <img src="banner/NuageNetz-6.webp">
+        <img src="banner/NuageNetz-7.webp">
+        <img src="banner/NuageNetz-8.webp">
+        <img src="banner/NuageNetz-9.webp">
+        <img src="banner/NuageNetz-10 (2).webp">
+        <img src="banner/NuageNetz-10.webp">
+        <img src="banner/brandsriseup1.webp">
+        <img src="banner/brandsriseup2.webp">
+        <img src="banner/brandsriseup3.webp">
+        <img src="banner/brandsriseup4.webp">
+        <img src="banner/brandsriseup5.webp">
+
+        
       </div>
     </div>
+
   </section>
 
 
-
+  <br>
+  <br>
   <section>
     <h1 class="heading"><span>My-Website </span>Design</h1>
     <div class="box-container">
